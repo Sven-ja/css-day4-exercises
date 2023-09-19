@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 80%;
+    height: 80%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raster {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    /* background-image: radial-gradient(blue, green); */
+}
+
+.link {
+    height: 1fr;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
+    color: antiquewhite;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease-in-out;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.link:hover .overlay {
+    opacity: 1;
+}
