@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgray;
+}
+
+:root {
+    --font-color-header: white;
+    --background-color-main: white;
+    --standard-gap-small: 15px;
+}
+
+.headline {
+    height: 35px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 21px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: xx-small;
+}
+
+header,
+a {
+    color: var(--font-color-header);
+    text-decoration: none;
+}
+
+.searchbar {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+}
+
+.poi {
+    position: absolute;
+    width: 100%;
+    top: 145px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--standard-gap-small);
+    padding: var(--standard-gap-small);
+}
+
+.goodies {
+    height: 240px;
+    background-color: var(--background-color-main)
+}
+
+.movies {
+    height: 240px;
+    background-color: var(--background-color-main)
+}
+
+#main-movie {
+    grid-column: 1/span 2;
+
+}
